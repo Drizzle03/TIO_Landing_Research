@@ -139,8 +139,8 @@ export default function TIOLanding() {
                   <div className="p-6 space-y-6">
 
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">흩어진 정보 소스</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">다양한 채널의 정보를 AI가 취합합니다.</p>
+                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">기업 자료 통합 분석</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">파편화된 정보를 취합해 보기 쉽게 제공합니다.</p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-3 text-center">
