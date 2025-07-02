@@ -87,8 +87,8 @@ export default function TIOLanding() {
 
             <AnimateOnScroll delay={100}>
               <h2 className="bg-gradient-to-br from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-5xl md:text-6xl">
-                자소서에 필요한 기업 분석,
-                <br />5분만에 끝내세요.
+                필수적인 기업 분석,
+                <br />5분 만에 끝내세요.
               </h2>
             </AnimateOnScroll>
 
@@ -123,7 +123,7 @@ export default function TIOLanding() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <AnimateOnScroll className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold leading-tight bg-gradient-to-br from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
-                  기업 공시부터 최근 뉴스까지
+                  기업 공시부터 최근 뉴스까지,
                   <br />
                   한 번에
                 </h2>
