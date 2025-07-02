@@ -93,14 +93,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         {/* Google Analytics 4 - Direct implementation */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FXGJBF0QW"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPX3KT7CC3"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-1FXGJBF0QW', {
+              gtag('config', 'G-SPX3KT7CC3', {
                 page_title: document.title,
                 page_location: window.location.href
               });
@@ -116,7 +116,7 @@ export default function RootLayout({
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "s5nouxhghb");
+              })(window, document, "clarity", "script", "s8jaf40nh0");
               console.log('Clarity Direct: Initialized');
             `,
           }}
