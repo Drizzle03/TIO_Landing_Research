@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Search, FileText, BarChart3, Users, Star, ArrowRight, ChevronRight, Building, TrendingUp, Upload } from "lucide-react"
+import { Search, FileText, BarChart3, Users, Star, ArrowRight, ChevronRight, Building, TrendingUp, Upload, Globe, Newspaper, ArrowDown } from "lucide-react"
 import Image from "next/image"
 import { ScrollingTags } from "@/components/scrolling-tags";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
@@ -117,7 +117,7 @@ export default function TIOLanding() {
       </section>
 
       {/* Feature 1: 기업 공시부터 최근 뉴스까지 한 번에 */}
-      <section className="py-20 md:py-28">
+      <section id="features" className="py-20 md:py-28">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -127,7 +127,7 @@ export default function TIOLanding() {
                   <br />
                   한 번에
                 </h2>
-                <div className="text-muted-foreground">
+                <div className="text-gray-600 dark:text-gray-300">
                   <p className="text-lg">Dart 기업 공시, 회사 홈페이지, 언론 보도까지</p>
                   <p className="text-lg">여러 곳에 흩어진 기업 정보를 한 곳에서</p>
                   <p className="text-lg">자소서에 필요한 핵심 내용만 정리해드려요</p>
@@ -135,56 +135,48 @@ export default function TIOLanding() {
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={200}>
-                <div className="rounded-2xl border border-white/20 bg-white/40 dark:bg-slate-800/40 backdrop-blur-xl p-3 shadow-2xl">
-                  <div className="overflow-hidden rounded-xl">
-                    {/* 기업 분석 UI 미리보기 */}
-                    <div className="bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 p-6 min-h-[450px] flex flex-col justify-start space-y-4">
-                      {/* 헤더 */}
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
-                          <Building className="h-5 w-5 text-white" />
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">삼성전자 분석 결과</h3>
-                      </div>
+                <Card className="overflow-hidden border-gray-200/60 dark:border-gray-700/60 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg shadow-gray-400/20 dark:shadow-black/10">
+                  <div className="p-6 space-y-6">
 
-                      {/* 최근 동향 */}
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-4 shadow-sm border border-blue-100/50 dark:border-blue-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-sm">
-                            최근 동향
-                          </span>
-                        </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          2025년 AI 반도체 시장 공격적 투자 확대, 갤럭시 AI 기능 강화로 프리미엄 스마트폰 차별화 전략 추진
-                        </p>
-                      </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">흩어진 정보 소스</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">다양한 채널의 정보를 AI가 취합합니다.</p>
+                    </div>
 
-                      {/* 사업 현황 */}
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-4 shadow-sm border border-purple-100/50 dark:border-purple-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-sm">
-                            주요 사업
-                          </span>
-                        </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          메모리 반도체(매출 1위), 스마트폰(갤럭시 시리즈), 디스플레이, 가전제품 등 다각화된 사업 포트폴리오
-                        </p>
+                    <div className="grid grid-cols-3 gap-3 text-center">
+                      <div className="bg-slate-100 dark:bg-slate-800/80 rounded-lg p-3">
+                      <FileText className="h-6 w-6 text-gray-500 dark:text-gray-400 mx-auto mb-2" />  
+                        <p className="text-sm font-medium text-slate-700 dark:text-slate-300">DART 공시</p>
                       </div>
-
-                      {/* 자소서 포인트 */}
-                      <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-xl p-4 shadow-sm border border-indigo-100/50 dark:border-indigo-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-sm">
-                            자소서 포인트
-                          </span>
-                        </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          AI 기술 혁신, 지속가능경영, 글로벌 경쟁력과 관련된 경험을 어필하면 효과적
-                        </p>
+                      <div className="bg-slate-100 dark:bg-slate-800/80 rounded-lg p-3">
+                      <Globe className="h-6 w-6 text-gray-500 dark:text-gray-400 mx-auto mb-2" />
+                        <p className="text-sm font-medium text-slate-700 dark:text-slate-300">홈페이지</p>
+                      </div>
+                      <div className="bg-slate-100 dark:bg-slate-800/80 rounded-lg p-3">
+                      <Newspaper className="h-6 w-6 text-gray-500 dark:text-gray-400 mx-auto mb-2" />
+                        <p className="text-sm font-medium text-slate-700 dark:text-slate-300">최신 뉴스</p>
                       </div>
                     </div>
+
+                    <div className="flex justify-center pt-2">
+                      <ArrowDown className="h-5 w-5 text-gray-400 dark:text-gray-500" />
+                    </div>
+
+                    {/* AI 요약 리포트 (강조) */}
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-5 text-white shadow-lg shadow-blue-500/20">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur">
+                          <Image src="/LOGO.png" alt="TIO Logo" width={18} height={18} className="opacity-90"/>
+                        </div>
+                        <h4 className="font-semibold text-white">AI 최종 분석 리포트</h4>
+                      </div>
+                      <p className="text-sm text-white/90 leading-relaxed">
+                        "삼성전자는 AI 반도체 시장을 선도하며, '갤럭시 AI'를 통해 글로벌 확산을 목표로 합니다. HBM3E와 2나노 파운드리 기술에 집중 투자하며 미래 성장을..."
+                      </p>
+                    </div>
+
                   </div>
-                </div>
+                </Card>
               </AnimateOnScroll>
             </div>
           </div>
@@ -216,51 +208,49 @@ export default function TIOLanding() {
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={200} className="lg:order-1">
-                <Card className="overflow-hidden border-white/20 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl shadow-2xl">
+                <Card className="overflow-hidden border-gray-200/60 dark:border-gray-700/60 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg shadow-gray-400/20 dark:shadow-black/10">
+                  
                   <div className="p-6">
-                    {/* 헤더 */}
-                    <div className="flex items-center space-x-3 mb-6">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
-                        <TrendingUp className="h-5 w-5 text-white" />
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center">
+                        <TrendingUp className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">마케팅 직무 분석</h3>
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 tracking-tight">마케팅</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Marketing Specialist</p>
+                      </div>
                     </div>
-
-                    {/* 직무 내용 */}
-                    <div className="space-y-4">
-                      {/* 주요 업무 */}
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-4 shadow-sm border border-blue-100/50 dark:border-blue-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-sm">
-                            주요 업무
-                          </span>
+                  </div>
+                  
+                  <div className="px-6 pb-6">
+                    <div className="space-y-5">
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">주요 역량</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {['데이터 분석력', '디지털 마케팅', '창의적 기획', '커뮤니케이션', '트렌드 파악'].map((skill) => (
+                            <span key={skill} className="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded text-xs font-medium">
+                              {skill}
+                            </span>
+                          ))}
                         </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          브랜드 전략 수립, 디지털 마케팅 캠페인 기획, 고객 데이터 분석, ROI 측정 및 개선
-                        </p>
                       </div>
 
-                      {/* 필요 역량 */}
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-4 shadow-sm border border-purple-100/50 dark:border-purple-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-sm">
-                            필요 역량
-                          </span>
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">합격 자소서 키워드</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {['#혁신', '#데이터', '#고객중심', '#협업', '#브랜드'].map((keyword) => (
+                            <span key={keyword} className="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded text-xs font-medium">
+                              {keyword}
+                            </span>
+                          ))}
                         </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          데이터 분석력, 창의적 사고, 트렌드 파악, 커뮤니케이션, 프로젝트 관리
-                        </p>
                       </div>
-
-                      {/* 자소서 어필 포인트 */}
-                      <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-xl p-4 shadow-sm border border-indigo-100/50 dark:border-indigo-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-sm">
-                            어필 포인트
-                          </span>
-                        </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          데이터 기반 의사결정 경험, 창의적 아이디어 실행 사례, 팀워크를 통한 성과 달성 경험
+                      
+                      {/* 자소서 활용 예시 (강조) */}
+                      <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-5 text-white shadow-lg shadow-blue-500/20">
+                        <h4 className="text-base font-semibold text-white mb-2">자소서 활용 Tip</h4>
+                        <p className="text-sm text-white/90 leading-relaxed">
+                          "SNS 캠페인 기획 시, 데이터 분석으로 타겟 고객을 세분화해 전환율 30%를 높인 경험이 있습니다. 이 과정에서 빠른 트렌드 파악과 창의적 콘텐츠 기획 역량을 키웠습니다."
                         </p>
                       </div>
                     </div>
@@ -296,47 +286,31 @@ export default function TIOLanding() {
               </AnimateOnScroll>
 
               <AnimateOnScroll delay={200}>
-                <Card className="overflow-hidden border-white/20 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl shadow-2xl">
+                <Card className="overflow-hidden border-gray-200/60 dark:border-gray-700/60 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg shadow-gray-400/20 dark:shadow-black/10">
                   <div className="p-6 space-y-6">
-                    {/* 헤더 */}
+                    {/* Header */}
                     <div className="flex items-center space-x-3">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
-                        <Upload className="h-5 w-5 text-white" />
+                      <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center">
+                        <Upload className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">추가 자료 업로드</h3>
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 tracking-tight">추가 리서치 자료</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">PDF, DOC, TXT 지원</p>
+                      </div>
                     </div>
 
-                    {/* 업로드 영역 */}
-                    <div className="space-y-4">
-                      {/* 파일 업로드 */}
-                      <div className="border-2 border-dashed border-blue-300 dark:border-blue-600 rounded-xl p-6 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/20 dark:to-indigo-900/20">
-                        <div className="text-center space-y-2">
-                          <Upload className="h-8 w-8 text-blue-500 mx-auto" />
-                          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">파일을 드래그하거나 클릭해서 업로드</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">PDF, DOC, TXT 파일 지원</p>
-                        </div>
-                      </div>
+                    {/* Uploaded File */}
+                    <div className="flex items-center space-x-3 p-3 bg-slate-100 dark:bg-slate-800/80 rounded-lg">
+                      <FileText className="h-5 w-5 text-slate-500" />
+                      <span className="text-sm text-slate-700 dark:text-slate-300">삼성전자_2024_지속가능경영보고서.pdf</span>
+                    </div>
 
-                      {/* 업로드된 파일 예시 */}
-                      <div className="space-y-2">
-                        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">업로드된 파일:</p>
-                        <div className="flex items-center space-x-3 p-3 bg-white dark:bg-slate-700 rounded-lg border border-gray-200 dark:border-slate-600">
-                          <FileText className="h-5 w-5 text-blue-500" />
-                          <span className="text-sm text-gray-700 dark:text-gray-300">삼성전자_2024_지속가능경영보고서.pdf</span>
-                        </div>
-                      </div>
-
-                      {/* AI 분석 결과 */}
-                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-4 shadow-sm border border-green-100/50 dark:border-green-800/30">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-sm">
-                            AI 분석 완료
-                          </span>
-                        </div>
-                        <p className="text-gray-900 dark:text-gray-100 text-sm leading-relaxed">
-                          환경경영 강화, 탄소중립 2050 목표, 순환경제 구축 등 지속가능경영 전략 발견. ESG 관련 자소서 작성 시 활용 가능한 키워드 추출 완료
-                        </p>
-                      </div>
+                    {/* AI 분석 요약 (강조) */}
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-5 text-white shadow-lg shadow-blue-500/20">
+                      <h4 className="text-base font-semibold text-white mb-2">AI 분석 요약</h4>
+                      <p className="text-sm text-white/90 leading-relaxed">
+                        환경경영 강화, 2050 탄소중립 목표, 순환경제 구축 등 지속가능경영 전략 발견. ESG 키워드를 자소서에 활용 가능.
+                      </p>
                     </div>
 
                   </div>
@@ -421,7 +395,7 @@ export default function TIOLanding() {
               </div>
             </div>
 
-            <Card className="overflow-hidden border-white/20 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl shadow-2xl">
+            <Card className="overflow-hidden border-white/20 bg-white/60 dark:bg-slate-800/60 backdrop-blur-xl shadow-lg shadow-gray-400/20 dark:shadow-black/10">
               <div className="p-6">
                 <BetaSignupForm />
                 <div className="mt-4">
